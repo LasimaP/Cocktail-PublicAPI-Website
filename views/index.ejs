@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/styles/main.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Crimson+Pro:ital,wght@0,200..900;1,200..900&family=Noto+Serif+Display&display=swap"
+      rel="stylesheet"
+    />
+
+    <title>Let's Make a Drink!</title>
+  </head>
+  <body>
+    <div class="container">
+      <h1>Let's Make a Drink!</h1>
+      <h3>
+        Make a random drink based on the cocktail name, your favorite spirit, or
+        if you have no preference, something completely random.
+      </h3>
+      <form action="/randomCocktail" id="form" class="form" method="POST">
+        <div class="form-group1">
+          <select id="spirit" name="spirit" class="form-select">
+            <option value="Vodka">Vodka</option>
+            <option value="Gin">Gin</option>
+            <option value="Tequila">Tequila</option>
+            <option value="Rum">Rum</option>
+            <option value="Spiced rum">Spiced Rum</option>
+            <option value="Light rum">Light Rum</option>
+            <option value="Dark rum">Dark Rum</option>
+            <option value="Whiskey">Whiskey</option>
+            <option value="Blended whiskey">Blended Whiskey</option>
+            <option value="Irish whiskey">Irish Whiskey</option>
+            <option value="Bourbon">Bourbon</option>
+            <option value="Brandy">Brandy</option>
+            <option value="Scotch">Scotch</option>
+            <option value="Cognac">Cognac</option>
+            <option value="Amaretto">Amaretto</option>
+            <option value="Kahlua">Kahlua</option>
+            <option values="Baileys irish cream">Baileys</option>
+            <option value="Midori melon liqueur">Midori</option>
+            <option value="Chocolate liqueur">Chocolate Liqueur</option>
+            <option value="Sweet Vermouth">Sweet Vermouth</option>
+            <option value="Dry Vermouth">Dry Vermouth</option>
+            <option value="Triple sec">Triple sec</option>
+          </select>
+        </div>
+        <div class="form-group2">
+          <button type="submit" class="form-submit">SEARCH BY SPIRIT</button>
+        </div>
+      </form>
+      <button
+        id="randomCocktail"
+        onclick="window.location.href='/randomCocktail'"
+      >
+        SUPRISE ME!
+      </button>
+    </div>
+    <div class="container2">
+      <div class="response-area">
+        <% if (locals.data) { %>
+        <h2><%= data.drinks[0].strDrink %></h2>
+        <p style="font-size: 2rem; font-weight: 500">Glass</p>
+        <p><%= data.drinks[0].strGlass %></p>
+        <br />
+        <p style="font-size: 2rem; font-weight: 500">Ingredients</p>
+        <p>
+          <%= data.drinks[0].strMeasure1 %> <%= data.drinks[0].strIngredient1 %>
+        </p>
+        <p>
+          <%= data.drinks[0].strMeasure2 %> <%= data.drinks[0].strIngredient2 %>
+        </p>
+        <p>
+          <%= data.drinks[0].strMeasure3 %> <%= data.drinks[0].strIngredient3 %>
+        </p>
+        <p>
+          <%= data.drinks[0].strMeasure4 %> <%= data.drinks[0].strIngredient4 %>
+        </p>
+        <p>
+          <%= data.drinks[0].strMeasure5 %> <%= data.drinks[0].strIngredient5 %>
+        </p>
+        <p>
+          <%= data.drinks[0].strMeasure6 %> <%= data.drinks[0].strIngredient6 %>
+        </p>
+        <p>
+          <%= data.drinks[0].strMeasure7 %> <%= data.drinks[0].strIngredient7 %>
+        </p>
+        <p>
+          <%= data.drinks[0].strMeasure8 %> <%= data.drinks[0].strIngredient8 %>
+        </p>
+        <p>
+          <%= data.drinks[0].strMeasure9 %> <%= data.drinks[0].strIngredient9 %>
+        </p>
+        <p>
+          <%= data.drinks[0].strMeasure10 %> <%= data.drinks[0].strIngredient10
+          %>
+        </p>
+        <p>
+          <%= data.drinks[0].strMeasure11 %> <%= data.drinks[0].strIngredient11
+          %>
+        </p>
+        <p>
+          <%= data.drinks[0].strMeasure12 %> <%= data.drinks[0].strIngredient12
+          %>
+        </p>
+        <p>
+          <%= data.drinks[0].strMeasure13 %> <%= data.drinks[0].strIngredient13
+          %>
+        </p>
+        <p>
+          <%= data.drinks[0].strMeasure14 %> <%= data.drinks[0].strIngredient14
+          %>
+        </p>
+        <p>
+          <%= data.drinks[0].strMeasure15 %> <%= data.drinks[0].strIngredient15
+          %>
+        </p>
+        <br />
+        <p style="font-size: 2rem; font-weight: 500">Instructions</p>
+        <p id="last"><%= data.drinks[0].strInstructions %></p>
+        <% } %>
+      </div>
+    </div>
+  </body>
+</html>

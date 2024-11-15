@@ -1,0 +1,117 @@
+body {
+  position: relative;
+  background-color: #cae6d5;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+  padding: 3rem;
+}
+
+@media screen and (max-width: 1024px) {
+  body {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr;
+    gap: 1rem;
+    padding: 3rem;
+  }
+}
+
+.container {
+  background-color: #013927;
+  border-style: solid;
+  border-color: black;
+  border-width: 6px;
+  text-align: center;
+  padding-inline: 10rem;
+}
+
+.container h1,
+.container h3,
+.container form,
+.container #randomCocktail {
+  margin-bottom: 3rem;
+}
+
+.container h1 {
+  color: white;
+  font-family: "Noto Serif Display", serif;
+  font-size: 4rem;
+  letter-spacing: 0px;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.container h3 {
+  color: #cae6d5;
+  font-family: "Crimson Pro", serif;
+  font-size: 2rem;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.form-group1 {
+  padding-bottom: 0.5rem;
+}
+
+select {
+  background-color: #013927;
+  border-color: #e1c340;
+  border-width: 4px;
+  color: #e1c340;
+  font-family: "Crimson Pro", serif;
+  font-size: 1.6rem;
+  font-weight: 200;
+  font-style: normal;
+  padding: 0.5rem;
+}
+
+button {
+  background-color: #013927;
+  border-color: #e1c340;
+  border-width: 4px;
+  color: #e1c340;
+  font-family: "Crimson Pro", serif;
+  font-size: 1.6rem;
+  font-weight: 200;
+  font-style: normal;
+  padding: 0.5rem;
+}
+
+.container2 {
+  background-image: url("/images/bartending.png");
+  background-size: cover;
+  border: solid;
+  border-color: black;
+  border-width: 6px;
+  text-align: center;
+}
+
+.response-area {
+  margin-left: 2rem;
+  margin-right: 2rem;
+  background-color: rgba(0, 0, 0, 0.6);
+}
+
+.response-area h2 {
+  color: white;
+  font-family: "Noto Serif Display", serif;
+  font-size: 3rem;
+  letter-spacing: 0px;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.response-area p {
+  color: white;
+  font-family: "Crimson Pro", serif;
+  font-size: 1.6rem;
+  font-weight: 400;
+  font-style: normal;
+  margin-left: 2rem;
+  margin-right: 2rem;
+}
+
+#last {
+  padding-bottom: 2rem;
+}
